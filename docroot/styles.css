@@ -1,0 +1,75 @@
+body {
+<?php if (strtoupper($BG) == 'KITTENS') { ?>
+  background: #fff url('kittens.jpg') no-repeat fixed center;
+  background-size: 100%;
+<?php } elseif (isset($BG) && $BG) { ?>
+  background: <?php echo $BG;?>;
+<?php } else { ?>
+  background: #ddd;
+<?php } ?>
+  color: gray;
+  width: 6in;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  text-align: center;
+  font-family: helvetica, arial, sans-serif;
+}
+#box {
+  background: #fff;
+  border: 3pt #aaa solid;
+  padding: 2em;
+  text-align: center;
+  color: <?php if (isset($FG) && $FG) echo $FG; else echo 'black';?>;
+}
+#day {
+  font-size: 4in;
+  font-weight: bold;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+#top, #bottom {
+  font-size: 3em;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+#copyright {
+  font-size: 10pt;
+}
+a:link, a:visited { 
+  color: gray; 
+}
+a:hover { 
+  color: black; 
+  text-decoration: underline; 
+}
+form {
+  background: #ddd;
+  color: black;
+  margin: 1em;
+  padding: 2em;
+  text-align: left;
+  line-height: 150%;
+}
+input, select {
+  margin-bottom: 0 0 1em 0;
+}
+input[type="submit"] {
+  float: right;
+}
+label {
+  font-size: smaller;
+  font-style: italic;
+  padding: 0;
+}
+.note {
+  padding: 0;
+  margin: 0 0 1em 0;
+  line-height: 150%;
+  font-size: smaller;
+  text-align: left;
+}
