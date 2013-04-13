@@ -36,8 +36,8 @@ $formats = array(
     <select name="TZ">
 <?php
 foreach(timezone_identifiers_list() as $timezone) {
-	printf("\t<option%s>%s</option>\n", 
-		(isset($TZ) && $timezone==$TZ) ? ' selected="selected"' : '', 
+	printf("\t<option%s>%s</option>\n",
+		(isset($TZ) && $timezone==$TZ) ? ' selected="selected"' : '',
 		$timezone);
 }
 ?>
@@ -68,7 +68,7 @@ foreach($formats as $format => $prompt) {
     <input type="submit" value="Save Settings" name="submit"/>
     </form>
     <form action="/" method="POST">
-    <p class="note">The form above will set a cookie containing your preferences 
+    <p class="note">The form above will set a cookie containing your preferences
     so that they will be
     remembered each time you return to this site. Apart from regular log data, none of
     your personal information is tracked or maintained. Press the button below
@@ -79,3 +79,13 @@ foreach($formats as $format => $prompt) {
 <?php require('footer.inc');?>
 </body>
 </html>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38736191-4', 'today-now.com');
+  ga('send', 'pageview');
+
+</script>

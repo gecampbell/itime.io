@@ -16,9 +16,9 @@ date_default_timezone_set($TZ);
 <!-- Timezone is <?php echo $TZ;?> -->
 <style type="text/css">
 <?php include('styles.css');?>
-#plain { 
+#plain {
   margin-top: 2em;
-  text-align: left; 
+  text-align: left;
   line-height: 150%;
   font-size: 11pt;
 }
@@ -33,12 +33,12 @@ date_default_timezone_set($TZ);
   <p>And, that's pretty much about it. Sorry if you were looking for more.</p>
   <p>It tries to detect your timezone from your browser; if your browser has
   Javascript disabled or does not support the proper functions, it will fall
-  back to UTC. Click on <a href="/settings">Settings</a> to change your time 
+  back to UTC. Click on <a href="/settings">Settings</a> to change your time
   zone and your preferences for how the time is displayed. You can also change
-  the various colors used.</p> 
+  the various colors used.</p>
   <p>Hint: try changing the background color to "kittens." (Note: will not work
   on modern browsers that support the color picker option.)</p>
-  <p><i>Acknowledgements:</i> Thanks very much to my friends at 
+  <p><i>Acknowledgements:</i> Thanks very much to my friends at
   <a href="http://friendfeed.com">FriendFeed</a> who actively gave suggestions
   and pointers as to how the site could be improved. Without you, this would have
   been nothing more than a site that displayed the date. Special thanks to
@@ -55,3 +55,13 @@ date_default_timezone_set($TZ);
 </body>
 </html>
 <?php require('ajax.js');
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-38736191-4', 'today-now.com');
+  ga('send', 'pageview');
+
+</script>
