@@ -27,3 +27,5 @@ date_default_timezone_set('America/Chicago');
   &bull; <a href="/timezone" title="Click here to change your timezone">Timezone</a></p>
 </body>
 </html>
+<?php require('ajax.js');?>
+<?php require('ga.js');?>
