@@ -7,7 +7,7 @@ if (!isset($TZ))	$TZ = 'UTC';
 if (!$TZ) 			$TZ = 'UTC';
 date_default_timezone_set($TZ);
 
-require('templates/default.php');
+require('templates/minimal.php');
 
 require('ajax.js');
 require('ga.js');

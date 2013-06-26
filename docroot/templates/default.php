@@ -6,6 +6,7 @@
 <meta name="generator" content="Glen Campbell: http://glenc.co/"/>
 <meta name="description" content="Calendar and clock: a single-function site"/>
 <meta name="keywords" content="calendar,clock,date,time"/>
+<!-- <?php echo basename(__FILE__); ?> -->
 <!-- Timezone is <?php echo $TZ;?> -->
 <style type="text/css">
 body {
