@@ -35,7 +35,7 @@ function ajaxDone(target) {
       results = req.responseText;
       document.getElementById(target).innerHTML = results;
     } else {
-      document.getElementById(target).innerHTML="ajax error:\n" +
+      document.getElementById(target).innerHTML="error\n" +
       req.statusText;
     }
   }
