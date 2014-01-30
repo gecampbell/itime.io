@@ -10,21 +10,30 @@
 <!-- <?php echo basename(__FILE__); ?> -->
 <!-- Timezone is <?php echo $TZ;?> -->
 <style type="text/css">
-body { 
-font-family: Helvetica, Arial, cursive; 
-margin: 24% auto;
-text-align: center;
-}
-#box { 
+body {
+font-family: Helvetica, Arial, cursive;
 font-size: 12pt;
-}
-#copyright { 
-font-family: helvetica, arial, serif;
-font-size: 10px; 
-margin-bottom: 10px;
-color: silver;
+margin: 0;
 text-align: center;
-margin-top: 20%;
+background-color: white;
+height: 90%;
+}
+#content {
+height: 100%;
+}
+#box {
+position: relative;
+top: 50%;
+transform: translateY(-100%);
+}
+#copyright {
+font-family: helvetica, arial, serif;
+font-size: 9pt;
+padding-bottom: 12pt;
+color: silver;
+position: relative;
+top: 100%;
+transform: translateY(-200%);
 }
 #date {
 font-size: 14px;
@@ -55,11 +64,11 @@ color: gray;
   	<span id="date"><?php echo date('F j, Y');?></span>
   	<span id="clock"><? php echo date($TF);?></span>
   </div>
-</div>
 <p id="copyright">&copy;<?php echo date('Y');?>
  <a href="http://glenc.io/"
  title="Perhaps the most amazing site on the Internet. Perhaps not.">Glen Campbell</a>
 &bull; <a href="/help" title="Click here if you need assistance">Help</a>
 &bull; <a href="/settings" title="Click here to change your time zone, format, and other settings">Settings</a></p>
+</div><!-- #content -->
 </body>
 </html>
