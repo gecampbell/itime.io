@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>TODAY-NOW</title>
+<title>The time right now is...</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Glen Campbell: http://glenc.co/">
@@ -36,7 +36,7 @@ top: 100%;
 transform: translateY(-200%);
 }
 #date {
-font-size: 14px;
+font-size: 10pt;
 display: block;
 color: gray;
 text-transform: uppercase;
@@ -46,7 +46,7 @@ letter-spacing: 3px;
 display: block;
 font-weight: bold;
 color: black;
-font-size: 50px;
+font-size: 36pt;
 }
 a, a:hover, a:link, a:visited {
 color: silver;
