@@ -1,5 +1,0 @@
-ErrorDocument 404 /404.php
-RewriteEngine On
-RewriteBase /
-RewriteRule ^settings$ settings.php [PT]
-RewriteRule ^help$ help.php [PT]
