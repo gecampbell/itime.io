@@ -1,61 +1,40 @@
 <!DOCTYPE html>
 <html>
-<!-- Copyright(c) 2015 Glen Campbell -->
+<!-- Copyright(c)2015 Glen Campbell -->
 <head>
-<title>Clock/Calendar</title>
+<title>itime.io</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="online clock for your computer desktop or wallpaper continuously updated">
+<meta name="description" content="Your Internet clock">
 <meta name="author" content="Glen Campbell <glen@xlerb.com>">
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-<link rel="icon" href="/favicon.ico" type="image/x-icon"><style>
+<style>
 body {
-background: url(http://cdn.broadpool.com/london.jpg) no-repeat center center fixed;
 font-family: helvetica neue, helvetica, arial, sans-serif;
-font-weight: normal;
+font-size: 1vw;
+background: url(http://cdn.broadpool.com/london.jpg) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
 margin: 0;
-padding: 0;
+padding: 0 10pt;
 line-height: 100%;
 }
-#clockbox {
-width: 100%;
-margin-left: auto;
-margin-right: auto;
-position: absolute;
-top: 2%;
-color: black;
-font-size: 24pt;
-font-size: 3vh;
-line-height: 60%;
-text-align: center;
+p#clockbox {
+text-align: right;
 }
-#clockbox span {
-letter-spacing: -0.5vw;
-color: black;
-line-height: 100%;
-font-size: 10vh;
+.day:after {
+content: ", ";
+}
+.date:after {
+content: "";
+}
+.time {
+display: block;
 font-weight: bold;
-}
-footer {
-width: 100%;
-font-size: 10pt;
-color: silver;
-position: absolute;
-bottom: 0;
-left: 0;
-margin: 0;
-}
-a {
-color: white;
-text-decoration: none;
-}
-a:hover {
-color: white;
-text-decoration: underline;
+letter-spacing: -2px;
+font-size: 3vw;
+line-height: 3vw;
 }
 footer {
 width: 98%;
@@ -68,11 +47,19 @@ left: 0;
 padding: 1%;
 margin: 0 auto 0 auto;
 }
+a {
+color: white;
+text-decoration: none;
+}
+a:hover {
+color: white;
+text-decoration: underline;
+}
 </style>
 </head>
 <body>
 
-<div id="clockbox"></div>
+<p id="clockbox"></p>
 
 <footer>
 &copy;2015 <a href="http://glencampbell.co" title="My world-famous blog/website thing">Glen Campbell</a>
@@ -101,7 +88,9 @@ else if(nhour >= 13) {ap = " PM";nhour -= 12;}
 
 if(nmin <= 9) {nmin = "0" +nmin;}
 
-document.getElementById('clockbox').innerHTML=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+", "+nyear+"<br><span>"+nhour+":"+nmin+ap+"</span>";
+document.getElementById('clockbox').innerHTML="<span class=\"day\">"+tday[nday]+"</span>"+
+  "<span class=\"date\">"+tmonth[nmonth]+" "+ndate+", "+nyear+"</span>"+
+  "<span class=\"time\">"+nhour+":"+nmin+ap+"</span>";
 setTimeout("GetClock()", 1000);
 }
 window.onload=GetClock;
@@ -112,7 +101,7 @@ window.onload=GetClock;
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-38736191-4', 'itime.io');
+  ga('create', 'UA-38736191-5', 'auto');
   ga('send', 'pageview');
 
 </script>
